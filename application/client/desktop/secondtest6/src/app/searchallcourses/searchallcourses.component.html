@@ -1,0 +1,56 @@
+<h2 class="screen-align">SearchAllCourses</h2>
+<div id="template-ia6a" class="row">
+    <div id="template-i67v" class="cell">
+        <label id="template-i8pj" class="label">Name</label>
+        <input id="template-idzc5" [(ngModel)]="course.Name" [ngModelOptions]="{standalone: true}"
+        class="input form-control" />
+    </div>
+    <div id="template-iavq" class="cell">
+        <label id="template-i3v59" class="label">Description</label>
+        <input id="template-i02cd" [(ngModel)]="course.description"
+        [ngModelOptions]="{standalone: true}" class="input form-control" />
+    </div>
+    <div id="template-i9pu" class="cell">
+        <label id="template-i1imi" class="label">Email</label>
+        <input id="template-ibava" [(ngModel)]="course.email" [ngModelOptions]="{standalone: true}"
+        class="input form-control" />
+    </div>
+</div>
+<div id="template-ikwy" class="row">
+    <div id="template-idqp" class="cell">
+        <label id="template-idy78" class="label">Language_Technology</label>
+        <input id="template-infv9" [(ngModel)]="course.language_tech"
+        [ngModelOptions]="{standalone: true}" class="input form-control" />
+        <button id="template-iuwy4" (click)="GpSearch()" class="button btn btn-primary">Search</button>
+    </div>
+    <div id="template-id6u" class="cell"></div>
+    <div id="template-iczu" class="cell"></div>
+</div>
+<div name="grid_template-ifo6w" class="">
+    <table id="table" class="table table-bordered  table-striped" data-show-header="true"
+    data-pagination="true" data-id-field="name">
+        <thead class="table table-hover">
+            <tr>
+                <th *ngFor="let column of columnDefs">{{column.headerName}}</th>
+            </tr>
+        </thead>
+        <tbody class="table-design" *ngIf="rowData.length==0">
+            <td style="text-align: center;" colspan="5">No Data Found</td>
+        </tbody>
+        <tbody class="table-design" *ngIf="rowData.length>0">
+            <tr (click)="onSelectionChanged(values)" *ngFor="let values of rowData | slice: (page-1) * paginationPageSize :(page-1) * paginationPageSize + paginationPageSize"
+            style="cursor: pointer;">
+                <td>{{ values.Name }}</td>
+                <td>{{ values.description }}</td>
+                <td>{{ values.email }}</td>
+                <td>{{ values.language_tech }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="text-right">
+        <ngb-pagination class="d-flex justify-content-start" [(page)]="page" [maxSize]="5"
+        [rotate]="true" [pageSize]="paginationPageSize" [collectionSize]="rowData.length"
+        [boundaryLinks]="true"></ngb-pagination>
+    </div>
+</div>
+<div id="myGrid" class=""></div>

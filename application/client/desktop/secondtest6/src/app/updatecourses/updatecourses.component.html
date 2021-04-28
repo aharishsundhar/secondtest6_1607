@@ -1,0 +1,28 @@
+<h2 class="screen-align">UpdateCourses</h2>
+<div id="template-ihmq" class="row">
+    <div id="template-ihvk" class="cell">
+        <label id="template-i14k" class="label">Name</label>
+        <input id="template-i019" [(ngModel)]="course.Name" [ngModelOptions]="{standalone: true}"
+        class="input form-control" />
+    </div>
+    <div id="template-idwm" class="cell">
+        <label id="template-i8db" class="label">Description</label>
+        <input id="template-ibka" [(ngModel)]="course.description"
+        [ngModelOptions]="{standalone: true}" class="input form-control" />
+    </div>
+    <div id="template-ih8f" class="cell">
+        <label id="template-ilbm" class="label">Email</label>
+        <input id="template-i0kcg" [(ngModel)]="course.email" [ngModelOptions]="{standalone: true}"
+        class="input form-control" />
+    </div>
+</div>
+<div id="template-ivh8t" class="row">
+    <div id="template-i7l1f" class="cell">
+        <label id="template-imuor" class="label">Language_Technology</label>
+        <input id="template-i91xh" [(ngModel)]="course.language_tech"
+        [ngModelOptions]="{standalone: true}" class="input form-control" />
+        <button id="template-ia9hj" (click)="GpUpdate()" class="button btn btn-primary">Update</button>
+    </div>
+    <div id="template-ino8y" class="cell"></div>
+    <div id="template-ikghd" class="cell"></div>
+</div>

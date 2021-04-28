@@ -1,0 +1,28 @@
+<h2 class="screen-align">CreateCourse</h2>
+<div id="template-i68z" class="row">
+    <div id="template-ia7h" class="cell">
+        <label id="template-io1m" class="label">Name</label>
+        <input id="template-ivron" [(ngModel)]="course.Name" [ngModelOptions]="{standalone: true}"
+        class="input form-control" />
+    </div>
+    <div id="template-i32s" class="cell">
+        <label id="template-icel4" class="label">Description</label>
+        <input id="template-i3icb" [(ngModel)]="course.description"
+        [ngModelOptions]="{standalone: true}" class="input form-control" />
+    </div>
+    <div id="template-i7dp" class="cell">
+        <label id="template-incyl" class="label">Email</label>
+        <input id="template-ifrqg" [(ngModel)]="course.description"
+        [ngModelOptions]="{standalone: true}" class="input form-control" />
+    </div>
+</div>
+<div id="template-i16q" class="row">
+    <div id="template-ib6r" class="cell">
+        <label id="template-iy2pn" class="label">Language_technology</label>
+        <input id="template-iah0j" [(ngModel)]="course.language_tech"
+        [ngModelOptions]="{standalone: true}" class="input form-control" />
+        <button id="template-iqetn" (click)="GpCreate()" class="button btn btn-primary">Send</button>
+    </div>
+    <div id="template-i6rg" class="cell"></div>
+    <div id="template-inke" class="cell"></div>
+</div>
